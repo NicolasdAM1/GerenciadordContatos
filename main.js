@@ -1,20 +1,22 @@
-import { prompt } from "./importador.js";
+import { prompt } from "./pack.js";
 import { adicionarContato } from "./funçõesContato/adicionarContato.js";
 import { listarContatos } from "./funçõesContato/listarContatos.js";
+import { atualizarContato } from "./funçõesContato/atualizarContato.js";
 
 export let contatos = [];
 
 export function exibirMenu(){
     console.clear();
-    console.log("=".repeat(10) + "CONTATOS" + "=".repeat(10));
-    console.log("Bem-vindo(a) ao Gerenciador de Contatos\n"
+    console.log("=".repeat(20) + "CONTATOS" + "=".repeat(20));
+    console.log(
+          "Bem-vindo(a) ao Gerenciador de Contatos\n"
         + "Digite o número de acordo com o que deseja:\n"
-        + "1 - Adicionar Contato\n"
-        + "2 - Listar Contatos\n"
-        + "3 - Editar Contato\n"
-        + "4 - Remover Contato\n"
-        + "5 - SAIR\n"
-        + "=".repeat(28));
+        + "1 - Adicionar Contato --------------------\n"
+        + "2 - Listar Contatos ----------------------\n"
+        + "3 - Editar Contato -----------------------\n"
+        + "4 - Remover Contato ----------------------\n"
+        + "5 - SAIR ---------------------------------\n"
+        + "=".repeat(48));
     let opMenu = prompt("> ");
     opMenu = parseInt(opMenu);
     switch(opMenu){

@@ -1,5 +1,5 @@
 import { contatos, exibirMenu } from "../main.js";
-import { prompt } from "../importador.js";
+import { prompt } from "../pack.js";
 import { adicionarContato } from "./adicionarContato.js";
 
 export function listarContatos() {
@@ -14,6 +14,6 @@ export function listarContatos() {
     contatos.forEach(contato => {
     console.log(`ID - ${contato.ID} || [ Nome: ${contato.nome} ] | [ Telefone: ${contato.telefone} ] | [ Email: ${contato.email} ]`);
 } );
-    prompt("Pressione ENTER para retornar ao MENU... ");
+    prompt("Pressione ENTER para retornar ao MENU...\n> ");
     exibirMenu();
     }
